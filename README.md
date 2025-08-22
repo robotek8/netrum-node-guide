@@ -120,38 +120,115 @@ You should see the Netrum Lite Node CLI interface:
 ```
 Run `netrum <command> --help` for command-specific options.
 
----
-
-## ⚡ Post-Domain Registration Workflow
-After registering your domain https://www.base.org/names, run the following sequence:
+---------------------------------------------------------------------------------------------------------------
 
 ```bash
 netrum-new-wallet
 
-![Netrum Lite Node Screenshot](https://github.com/robotek8/netrum-node-guide/blob/main/images/createnewwallet.png?raw=true)
+After entering the command, you will see something like the following:
 
+rasalghul@rasalghul-System-Product-Name:~/netrum-lite-node$ netrum-new-wallet
+✅ New Wallet Created:
+Address:  0xA6c548C5729F229836d7B973388
+Private Key:  0x7f4bf80c7a1e7eb7b418db62da79 
+?? Saved to /home/rasalghul/netrum-lite-node/data/wallet/key.txt
+?? Also saved to /home/rasalghul/netrum-lite-node/src/wallet/key.txt
+
+Import your private key into an EVM wallet and fund it with $5.
+👉 “You will have your own address and private key.”
+
+----------------------------------------------------------------------------------------------------------------
+
+Go to https://www.base.org/names and register your unique domain, paying for it with the wallet you just created. After registration, run the following command:
 
 netrum-check-basename
+
+After entering the command, you will see something like the following:
+
+rasalghul@rasalghul-System-Product-Name:~/netrum-lite-node$ netrum-check-basename
+?? Checking .base name for: 0xA6c548C5729F229836d7B9733888D4c901F9708C
+✅  .base name found: netrum-node.base.eth
+??  Saved domain name to: /home/rasalghul/netrum-lite-node/src/identity/node-id/basename.txt
+
+----------------------------------------------------------------------------------------------------------------
+
 netrum-node-id
+
+You will see this:
+
+rasalghul@rasalghul-System-Product-Name:~/netrum-lite-node$ netrum-node-id
+✅  Generated Node ID: netrum.lite.netrum-node.base.eth
+??  Saved locally: /home/rasalghul/netrum-lite-node/src/identity/node-id/id.txt
+??  Also saved to global path: /home/rasalghul/netrum-lite-node/data/node-id/id.txt
+
+-----------------------------------------------------------------------------------------------------------------
+
 netrum-node-sign
+
+You will see:
+
+rasalghul@rasalghul-System-Product-Name:~/netrum-lite-node$ netrum-node-sign
+Looking for wallet key at: /home/rasalghul/netrum-lite-node/src/wallet/key.txt
+Looking for node ID at: /home/rasalghul/netrum-lite-node/src/identity/node-id/id.txt
+
+?? Signing Details:
+
+-----------------------------------------------------------------------------------------------------------------
+Node ID:      netrum.lite.netrum-node.base.eth
+Signer Addr:  0xA6c548C5729F229836d7B9733888D4c901F9708C
+Timestamp:    1755862446
+Message Hash: 0x0fe6c527d27c7407807d9d4394306374273486e3f7d467ab45e59c0d98e55283
+Signature:    0xb07bb0dac9be3f2d4060407c8827fcb5549da5fd34c23d3b1f1c5bb18268ea440de25b3813d1d66347920a88570941c851c4c2037bfcf333aafe12e554aa68d71c
+
+------------------------------------------------------------------------------------------------------------------
+
 netrum-node-register
+
+As a result of running this command, you should see the following message at the end. If you see it, it means the node registration was successful:
+
+⏳ Registration Response Data:
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                                      │
+│   🆔 Node ID: netrum.lite.netrum-node.base.eth                                                       │
+│   🟠 Wallet: 0xA6c548C5729F229836d7B9733888D4c901F9708C                                              │
+│   ✍️ Signature: 0xb07bb0dac9be3f2d4060407c8827fcb5549da5fd34c23d3b1f1c5bb18268ea440de25b3813d1d663   │
+│   47920a88570941c851c4c2037bfcf333aafe12e554aa68d71c                                                 │
+│   🔗 TX Hash: 0xa32d740e592b278aa824b0b5514dec3c330891cedf094207690e9e1947eeb006                     │
+│                                                                                                      │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+✅ Registration Completed Successfully!
+
+------------------------------------------------------------------------------------------------------------------
+
 netrum-sync
-```
 
-Wait until you see the message:
-```
-Mining token saved
-```
+Yoy will see:
 
-Then start mining:
-```bash
+✅   Netrum Node Sync service installed.
+
+Check status:
+  sudo systemctl status netrum-node.service
+
+Live logs:
+  netrum-sync-log
+
+------------------------------------------------------------------------------------------------------------------
+
+netrum-sync-log
+
+You will see:
+
+[INFO] Mining token saved
+
+After this, run command:
+
 netrum-mining
-```
 
-To check mining status:
-```bash
-netrum-mining-log
-```
+
+
 
 ---
 
