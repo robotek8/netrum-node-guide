@@ -9,6 +9,29 @@ It aims to lower the technical barrier for developers and provide a seamless int
 
 ---
 
+## 💻 Hardware & Network Requirements
+
+To run the **Netrum Lite Node** smoothly, make sure your system meets the following minimum requirements:
+
+### 🔧 Hardware Requirements
+| Component   | Minimum | Recommended |
+|-------------|----------|--------------|
+| **CPU**     | 2 Cores  | 2+ Cores     |
+| **RAM**     | 4 GB     | 6 GB+        |
+| **Disk**    | 50 GB SSD| 100 GB SSD   |
+
+⚡ *SSD storage is highly recommended for faster performance and node stability.*
+
+### 🌐 Network Requirements
+| Type       | Minimum Speed |
+|------------|----------------|
+| **Download** | 10 Mbps       |
+| **Upload**   | 10 Mbps       |
+
+A stable and fast internet connection is crucial for uptime, sync, mining tasks, and daily reward claims.
+
+---
+
 ## 🚀 Key Features
 - 🤖 **AI-Assisted Development** – auto-generates secure smart contracts, optimizes gas usage, and simplifies development.
 - 🔗 **Multi-Chain Support** – unified API/SDK interface to interact with multiple blockchains.
