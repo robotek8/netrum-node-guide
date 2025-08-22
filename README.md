@@ -128,7 +128,8 @@ After registering your domain https://www.base.org/names, run the following sequ
 ```bash
 netrum-new-wallet
 
-<img width="809" height="133" alt="Снимок экрана от 2025-08-22 15-42-53" src="https://github.com/user-attachments/assets/bbaa6aba-dbfd-49d0-8a1a-c0a48100e085" />
+![Netrum Lite Node Screenshot](images/1.png)
+
 
 
 netrum-check-basename
