@@ -139,9 +139,7 @@ Import your private key into an EVM wallet and fund it with $5.
 
 ----------------------------------------------------------------------------------------------------------------
 
-Go to [base.org/names](https://www.base.org/names)
-
-and register your unique domain, paying for it with the wallet you just created. After registration, run the following command:
+Go to https://www.base.org/names and register your unique domain, paying for it with the wallet you just created. After registration, run the following command:
 
 netrum-check-basename
 
@@ -229,8 +227,13 @@ After this, run command:
 
 netrum-mining
 
+after 60s run this command:
 
+netrum-mining-log
 
+You should see something like the following:
+
+⏱️ 6h 11m 32s | 74.20% | Mined: 4.41191256 NPT | Speed: 0.00006882/s | Status: ✅ ACTIVE
 
 ---
 
