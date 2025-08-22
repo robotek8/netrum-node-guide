@@ -128,7 +128,7 @@ After registering your domain https://www.base.org/names, run the following sequ
 ```bash
 netrum-new-wallet
 
-![Netrum Lite Node Screenshot](images/1.png)
+<img width="809" height="133" alt="1" src="https://github.com/user-attachments/assets/56200a3a-665b-444f-85a1-2691fb9eea81" />
 
 
 netrum-check-basename
