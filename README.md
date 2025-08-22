@@ -139,7 +139,7 @@ Import your private key into an EVM wallet and fund it with $5.
 
 ----------------------------------------------------------------------------------------------------------------
 
-Go to https://www.base.org/names and register your unique domain, paying for it with the wallet you just created. After registration, run the following command:
+Go to [base names](https://www.base.org/names) and register your unique domain, paying for it with the wallet you just created. After registration, run the following command:
 
 netrum-check-basename
 
