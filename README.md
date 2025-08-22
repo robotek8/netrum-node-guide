@@ -50,30 +50,108 @@ A stable and fast internet connection is crucial for uptime, sync, mining tasks,
 
 ---
 
-## 🔧 Netrum Lite Node Installation
+## 🔧 Netrum Lite Node – Setup Guide (Ubuntu/Linux)
+
+Follow these steps to install and run the **Netrum Lite Node CLI** on Ubuntu/Linux:
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/NetrumLabs/netrum-lite-node.git
+```
+
+### 2. Navigate to Project Directory
+```bash
 cd netrum-lite-node
 ```
 
-### 2. Install Dependencies
+### 3. Install Required Dependencies
+```bash
+sudo apt update && sudo apt install -y curl bc jq speedtest-cli nodejs npm
+```
+
+### 4. (Recommended) Install Node.js v20
+Check your current Node.js version:
+```bash
+node -v
+```
+If not **v20.x.x**, install it:
+```bash
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+### 5. Install Project Dependencies
 ```bash
 npm install
 ```
 
-### 3. Start the Node
+### 6. Link the CLI Globally
 ```bash
-npm start
+npm link
 ```
+
+### 7. Test the CLI
+```bash
+netrum
+```
+You should see the Netrum Lite Node CLI interface:
+```
+  Netrum CLI  Version v2.0.0
+  Light-weight node & wallet toolkit for the Netrum network.
+
+  Available Commands:
+  netrum-update          Cli Update
+  netrum-system          System status & logs
+  netrum-new-wallet      Create / new a wallet
+  netrum-import-wallet   Create / import a wallet
+  netrum-wallet          Create / inspect a wallet
+  netrum-wallet-key      Export private key
+  netrum-wallet-remove   Delete wallet files
+  netrum-check-basename  Check basename conflicts
+  netrum-node-id         Show current Node ID
+  netrum-node-id-remove  Clear Node ID
+  netrum-node-sign       Sign a message with node key
+  netrum-node-register   Register node on-chain
+  netrum-sync            Sync blockchain data
+  netrum-sync-log        Node sync logs
+  netrum-mining          Start mining
+  netrum-mining-log      Node mining logs
+  netrum-claim           Claim rewards
+```
+Run `netrum <command> --help` for command-specific options.
 
 ---
 
-## ⚠️ Requirements
-- Node.js v16+  
-- npm (Node Package Manager)  
-- Stable internet connection  
+## ⚡ Post-Domain Registration Workflow
+After registering your domain https://www.base.org/names, run the following sequence:
+
+```bash
+netrum-new-wallet
+
+<img width="809" height="133" alt="Снимок экрана от 2025-08-22 15-42-53" src="https://github.com/user-attachments/assets/bbaa6aba-dbfd-49d0-8a1a-c0a48100e085" />
+
+
+netrum-check-basename
+netrum-node-id
+netrum-node-sign
+netrum-node-register
+netrum-sync
+```
+
+Wait until you see the message:
+```
+Mining token saved
+```
+
+Then start mining:
+```bash
+netrum-mining
+```
+
+To check mining status:
+```bash
+netrum-mining-log
+```
 
 ---
 
